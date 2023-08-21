@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finance-dashboard</title>
+    <link rel="shortcut icon" href="./assets//img//svg/page_logo.svg" type="image/x-icon">
+    <!-- my css link here -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- bootstrap link here -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <!-- slider link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+      integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+      integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="body_clr">
+    <header>
+      <!-- sidebaar -->
+      <nav class="bg-white sidebaar_w_65 position-fixed start-0 top-0 z_index_2">
+        <div class="container custome_container ">
+          <div class="d-flex flex-column justify-content-between vh-100">
+            <div class="pt-5">
+              <div>
+                <a href="#"
+                  ><img
+                    width="37px"
+                    src="./assets/img/svg/page_logo.svg"
+                    alt="page_logo"
+                /></a>
+              </div>
+              <div class="d-flex flex-column align-items-center">
+                <div class="pt-5 mt-3">
+                  <a onclick="openDashboard(event, 'tab_1')"
+                  id="defaultOpen" href="#" class="hover_svg position-relative tablinks active"
+                ><svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_2_9)">
+                        <path
+                          d="M3.99998 0H6.99998C9.20911 0 11 1.79086 11 3.99998V6.99998C11 9.20911 9.20911 11 6.99998 11H3.99998C1.79086 11 0 9.20916 0 6.99998V3.99998C0 1.79086 1.79086 0 3.99998 0Z"
+                          fill="#ACACAC"
+                        />
+                        <path
+                          d="M17 0H20C22.2091 0 24 1.79086 24 3.99998V6.99998C24 9.20911 22.2091 11 20 11H17C14.7909 11 13 9.20911 13 6.99998V3.99998C13 1.79086 14.7908 0 17 0Z"
+                          fill="#ACACAC"
+                        />
+                        <path
+                          d="M3.99998 13H6.99998C9.20911 13 11 14.7909 11 17V20C11 22.2091 9.20911 24 6.99998 24H3.99998C1.79086 24 0 22.2092 0 20V17C0 14.7909 1.79086 13 3.99998 13Z"
+                          fill="#ACACAC"
+                        />
+                        <path
+                          d="M17 13H20C22.2091 13 24 14.7909 24 17V20C24 22.2092 22.2091 24 20 24H17C14.7909 24 13 22.2092 13 20V17C13 14.7909 14.7908 13 17 13Z"
+                          fill="#ACACAC"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_2_9">
+                          <rect width="24" height="24" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </a>
+                </div>
+                <div class="pt-5 mt-3">
+                  <a onclick="openDashboard(event, 'tab_2')"
+                  id="defaultOpen" href="#" class="hover_svg position-relative"
+                    ><svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g>
+                        <path
+                          d="M15 8.00002H21.54C21.1909 7.0749 20.6485 6.2349 19.949 5.53604L16.465 2.05004C15.7653 1.35137 14.9251 0.80935 14 0.460037V7.00004C14 7.55227 14.4477 8.00002 15 8.00002Z"
+                          fill="#ACACAC"
+                        />
+                        <path
+                          d="M21.976 9.99998H15C13.3431 9.99998 12 8.65683 12 6.99998V0.024C11.839 0.0129844 11.678 0 11.515 0H6.99997C4.23992 0.00332812 2.00328 2.23997 2 5.00002V19C2.00328 21.76 4.23992 23.9967 6.99997 24H17C19.76 23.9967 21.9966 21.76 22 19V10.485C22 10.322 21.987 10.161 21.976 9.99998Z"
+                          fill="#ACACAC"
+                        />
+                      </g>
+                    </svg>
+                  </a>
+                </div>
+                <div class="pt-5 mt-3">
+                  <a  onclick="openDashboard(event, 'tab_3')"
+                  id="defaultOpen" href="#" class="hover_svg position-relative"
+                    ><svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_2_19)">
+                        <path
+                          d="M12 6C11.2044 6 10.4413 6.31607 9.87868 6.87868C9.31607 7.44129 9 8.20435 9 9V21C9 21.7956 9.31607 22.5587 9.87868 23.1213C10.4413 23.6839 11.2044 24 12 24C12.7956 24 13.5587 23.6839 14.1213 23.1213C14.6839 22.5587 15 21.7956 15 21V9C15 8.20435 14.6839 7.44129 14.1213 6.87868C13.5587 6.31607 12.7956 6 12 6Z"
+                          fill="#ACACAC"
+                        />
+                        <path
+                          d="M21 0C20.2044 0 19.4413 0.31607 18.8787 0.87868C18.3161 1.44129 18 2.20435 18 3V21C18 21.7956 18.3161 22.5587 18.8787 23.1213C19.4413 23.6839 20.2044 24 21 24C21.7956 24 22.5587 23.6839 23.1213 23.1213C23.6839 22.5587 24 21.7956 24 21V3C24 2.20435 23.6839 1.44129 23.1213 0.87868C22.5587 0.31607 21.7956 0 21 0V0Z"
+                          fill="#ACACAC"
+                        />
+                        <path
+                          d="M3 12C2.20435 12 1.44129 12.3161 0.87868 12.8787C0.31607 13.4413 0 14.2044 0 15L0 21C0 21.7956 0.31607 22.5587 0.87868 23.1213C1.44129 23.6839 2.20435 24 3 24C3.79565 24 4.55871 23.6839 5.12132 23.1213C5.68393 22.5587 6 21.7956 6 21V15C6 14.2044 5.68393 13.4413 5.12132 12.8787C4.55871 12.3161 3.79565 12 3 12Z"
+                          fill="#ACACAC"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_2_19">
+                          <rect width="24" height="24" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </a>
+                </div>
+                <div class="pt-5 mt-3">
+                  <a onclick="openDashboard(event, 'tab_4')"
+                  id="defaultOpen" href="#" class="hover_svg position-relative"
+                    ><svg
+                      width="25"
+                      height="25"
+                      viewBox="0 0 25 25"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g id="iconspace_Wallet_25px">
+                        <path
+                          id="Combined Shape"
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M4.5 7H19V4.5C19 3.67157 18.3284 3 17.5 3C17.4383 3 17.3767 3.00381 17.3154 3.0114L4.16959 4.64132C2.92758 4.80692 2 5.86638 2 7.11939V8.05051C2.63526 7.40223 3.52066 7 4.5 7ZM20.5 8H4.5C3.81814 8 3.18214 8.27292 2.71424 8.75041L2 9.47928V20.5C2 21.8807 3.11929 23 4.5 23H20.5C21.8807 23 23 21.8807 23 20.5V19H17.5C15.567 19 14 17.433 14 15.5C14 13.567 15.567 12 17.5 12H23V10.5C23 9.11929 21.8807 8 20.5 8ZM17.5 13C16.1193 13 15 14.1193 15 15.5C15 16.8807 16.1193 18 17.5 18H23V13H17.5Z"
+                          fill="#ACACAC"
+                        />
+                      </g>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-column align-items-center">
+              <div>
+                <a onclick="openDashboard(event, 'tab_5')"
+                  id="defaultOpen" href="#" class="hover_svg position-relative"
+                  ><svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g>
+                      <path
+                        d="M1.60706 18C2.43422 19.4356 4.26858 19.9288 5.70417 19.1017C5.70516 19.1011 5.7061 19.1005 5.70708 19.1L6.15206 18.843C6.99206 19.5616 7.9576 20.119 9.00005 20.487V21C9.00005 22.6568 10.3432 24 12 24C13.6569 24 15 22.6568 15 21V20.487C16.0426 20.1184 17.0082 19.5604 17.848 18.841L18.295 19.099C19.731 19.9274 21.5666 19.4349 22.3951 17.999C23.2235 16.563 22.731 14.7274 21.295 13.899L20.851 13.643C21.0509 12.5554 21.0509 11.4405 20.851 10.353L21.295 10.097C22.731 9.26855 23.2235 7.43292 22.3951 5.99695C21.5666 4.56103 19.731 4.06852 18.295 4.89694L17.85 5.15395C17.0092 4.43616 16.043 3.87984 15 3.513V3C15 1.34316 13.6569 0 12 0C10.3432 0 9.00005 1.34316 9.00005 3V3.513C7.95746 3.88158 6.99188 4.43958 6.15206 5.15902L5.70506 4.90003C4.2691 4.07156 2.43347 4.56408 1.60505 6C0.776627 7.43592 1.2691 9.27159 2.70506 10.1L3.14906 10.356C2.94919 11.4435 2.94919 12.5584 3.14906 13.646L2.70506 13.902C1.27308 14.7326 0.782205 16.5647 1.60706 18ZM12 8.00002C14.2092 8.00002 16 9.79088 16 12C16 14.2091 14.2092 16 12 16C9.79092 16 8.00006 14.2091 8.00006 12C8.00006 9.79088 9.79092 8.00002 12 8.00002Z"
+                        fill="#ACACAC"
+                      />
+                    </g>
+                  </svg>
+                </a>
+              </div>
+              <div class="py-5 mb-3">
+                <a onclick="openDashboard(event, 'tab_6')"
+                  id="defaultOpen" href="#" class="hover_svg position-relative transition"
+                  ><svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g>
+                      <path
+                        d="M9 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H9"
+                        stroke="#ACACAC"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M16 17L21 12L16 7"
+                        stroke="#ACACAC"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M21 12H9"
+                        stroke="#ACACAC"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </g>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- navbaar -->
+      <nav class="ms-5 ps-3 ps-xl-5 py-4 body_clr position-fixed top-0 z_index_1 w-100 pe-5 ">
+        <div class="custome_container mt-3">
+          <div class="d-flex align-items-center justify-content-between pe-lg-4">
+            <a href="#" class="fw-bold fs_4xl text-black">Dashboard</a>
+            <div class="d-md-none">
+              <img src="./assets/img/png/search.png" alt="search" />
+            </div>
+            <div
+              class="input_clr align-items-center d-none d-md-flex d-lg-none"
+            >
+              <span class="ms-3 py-2 cursor_pointer"
+                ><img src="./assets/img/png/search.png" alt="search"
+              /></span>
+              <input
+                type="text"
+                class="fw-normal fs_md border-0 input_padding py-2"
+                placeholder="Search for transaction, item, etc"
+              />
+            </div>
+
+            <div class="d-flex align-items-center nav-menu">
+              <div class="input_clr d-lg-flex align-items-center d-none">
+                <span class="ms-3 py-2 cursor_pointer"
+                  ><img src="./assets/img/png/search.png" alt="search"
+                /></span>
+                <input
+                  type="text"
+                  class="fw-normal fs_md border-0 input_padding py-2"
+                  placeholder="Search for transaction, item, etc"
+                />
+              </div>
+              <div
+                class="d-flex align-items-center mt-5 mt-lg-0 justify-content-center"
+              >
+                <a href="#" class="ms-lg-5 ps-lg-1"
+                  ><img
+                    width="28px"
+                    src="./assets/img/svg/bell.svg"
+                    alt="bell_icon"
+                /></a>
+                <a href="#" class="ms-4 ps-2"
+                  ><img
+                    width="28px"
+                    src="./assets//img//svg/message_circle.svg"
+                    alt="msg_box"
+                /></a>
+                <div class="ps-4 ms-2 d-flex align-items-center">
+                  <img
+                    width="36px"
+                    src="./assets/img/png/man_logo_nav.png"
+                    alt="man_logo"
+                  />
+                  <div class="ms-3 cursor_pointer">
+                    <svg
+                      width="14"
+                      height="8"
+                      viewBox="0 0 14 8"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1 1L7 7L13 1"
+                        stroke="#6D7D93"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="hamburger d-lg-none index_5 ms-2 d-lg-none">
+              <span class="bar ms-auto"></span>
+              <span class="bar bar-2"></span>
+              <span class="bar ms-auto"></span>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- hero-section -->
+    <div id="tab_1" class="tabcontent active">
+      <section class="ms-5 ps-3 ps-xl-5 pt-5 mt-5">
+        <div class="custome_container pe-lg-4">
+          <div class="row mt-5">
+            <div class="col-xl-9">
+              <div class="slider">
+                <div class="mx-2">
+                  <div class="card_1">
+                    <div class="py-3 ps-4">
+                      <h2 class="fw-normal fs_lg clr_gray mt-1 mb-0">
+                        Total Earning
+                      </h2>
+                      <p class="fw-bold fs_3xl clr_gray mt-3 pt-1 mb-0">
+                        $ 120,000
+                      </p>
+                      <div
+                        class="d-flex align-items-center justify-content-between pb-2 mt-3 pt-1"
+                      >
+                        <p class="mb-0 fs_xsm fw-normal clr_gray">
+                          <span class="fs_sm clr_gray">12% </span>Increase From
+                          Target
+                        </p>
+                        <span class="pe-3 cursor_pointer arrow">&uarr;</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mx-2">
+                  <div class="card_1">
+                    <div class="py-3 ps-4">
+                      <h2 class="fw-normal fs_lg clr_gray mt-1 mb-0">Invoices</h2>
+                      <p class="fw-bold fs_3xl clr_gray mt-3 pt-1 mb-0">
+                        $ 16,500
+                      </p>
+                      <div
+                        class="d-flex align-items-center justify-content-between pb-2 mt-3 pt-1"
+                      >
+                        <p class="mb-0 fs_xsm fw-normal clr_gray">
+                          <span class="fs_sm clr_gray">2% </span>Decrease From
+                          Target
+                        </p>
+                        <span class="pe-3 cursor_pointer arrow">&darr;</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mx-2">
+                  <div class="card_1">
+                    <div class="py-3 ps-4">
+                      <h2 class="fw-normal fs_lg clr_gray mt-1 mb-0">
+                        Total Spending
+                      </h2>
+                      <p class="fw-bold fs_3xl clr_gray mt-3 pt-1 mb-0">
+                        $ 48,670
+                      </p>
+                      <div
+                        class="d-flex align-items-center justify-content-between pb-2 mt-3 pt-1"
+                      >
+                        <p class="mb-0 fs_xsm fw-normal clr_gray">
+                          <span class="fs_sm clr_gray">6% </span>Increase From
+                          Target
+                        </p>
+                        <span class="pe-3 cursor_pointer arrow">&uarr;</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mx-2">
+                  <div class="card_1">
+                    <div class="py-3 ps-4">
+                      <h2 class="fw-normal fs_lg clr_gray mt-1 mb-0">Balance</h2>
+                      <p class="fw-bold fs_3xl clr_gray mt-3 pt-1 mb-0">
+                        $ 74,330
+                      </p>
+                      <div
+                        class="d-flex align-items-center justify-content-between pb-2 mt-3 pt-1"
+                      >
+                        <p class="mb-0 fs_xsm fw-normal clr_gray">
+                          <span class="fs_sm clr_gray">1% </span>Increase From
+                          Target
+                        </p>
+                        <span class="pe-3 cursor_pointer arrow">&uarr;</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="m-4 pt-3">
+                <img class="w-100" src="./assets/img/png/map_img.png" alt="map" />
+              </div>
+              <div class="mt-5">
+                <h2 class="fw-bold fs_2xl text-black m-0 mb-1">
+                  Activity Summary
+                </h2>
+                <div class="account_box px-2 px-md-4 px-lg-5 py-4 mt-3">
+                  <div
+                    class="py-2 d-flex align-items-center justify-content-between pb-1"
+                  >
+                    <div class="d-flex align-items-center">
+                      <h2
+                        class="fw-normal fs_lg clr_gray mb-0 history_underline position-relative history"
+                      >
+                        History
+                      </h2>
+                      <h2
+                        class="fw-normal fs_lg clr_gray mb-0 ms-2 ms-sm-3 ms-md-4 ms-lg-5 history_underline position-relative history"
+                      >
+                        Upcoming
+                      </h2>
+                    </div>
+                    <div class="cursor_pointer">
+                      <span class="fw-medium fs_lg clr_gray">View More</span>
+                      <span class="ps-2"
+                        ><svg
+                          width="16"
+                          height="12"
+                          viewBox="0 0 16 12"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M1 5.25C0.585786 5.25 0.25 5.58579 0.25 6C0.25 6.41421 0.585786 6.75 1 6.75V5.25ZM15.5303 6.53033C15.8232 6.23744 15.8232 5.76256 15.5303 5.46967L10.7574 0.696699C10.4645 0.403806 9.98959 0.403806 9.6967 0.696699C9.40381 0.989593 9.40381 1.46447 9.6967 1.75736L13.9393 6L9.6967 10.2426C9.40381 10.5355 9.40381 11.0104 9.6967 11.3033C9.98959 11.5962 10.4645 11.5962 10.7574 11.3033L15.5303 6.53033ZM1 6.75H15V5.25H1V6.75Z"
+                            fill="#6D7D93"
+                          />
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="underline w-100 mt-4"></div>
+                  <div class="target_sales_box mt-3 mb-1 cards">
+                    <div
+                      class="py-2 my-1 px-3 d-flex align-items-center justify-content-between"
+                    >
+                      <div class="d-flex align-items-center">
+                        <img
+                          width="48px"
+                          src="./assets/img/png/first_img.png"
+                          alt="1st_img"
+                        />
+                        <div class="ps-3">
+                          <p class="mb-0 fw-bold fs_sm text-black">
+                            Sale of goods
+                          </p>
+                          <p class="fw-bold fs_xsm clr_gray pt-2 mb-0">
+                            1 month later
+                          </p>
+                        </div>
+                      </div>
+                      <div class="cursor_pointer">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M9 18L15 12L9 6"
+                            stroke="#6D7D93"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="target_sales_box mt-3 mb-1 cards">
+                    <div
+                      class="py-2 my-1 px-3 d-flex align-items-center justify-content-between"
+                    >
+                      <div class="d-flex align-items-center">
+                        <img
+                          width="48px"
+                          src="./assets/img/png/second_img.png"
+                          alt="1st_img"
+                        />
+                        <div class="ps-3">
+                          <p class="mb-0 fw-bold fs_sm text-black">
+                            property rental
+                          </p>
+                          <p class="fw-bold fs_xsm clr_gray pt-2 mb-0">
+                            3 month later
+                          </p>
+                        </div>
+                      </div>
+                      <div class="cursor_pointer">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M9 18L15 12L9 6"
+                            stroke="#6D7D93"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="target_sales_box mt-3 mb-1 cards">
+                    <div
+                      class="py-2 my-1 px-3 d-flex align-items-center justify-content-between"
+                    >
+                      <div class="d-flex align-items-center">
+                        <img
+                          width="48px"
+                          src="./assets/img/png/third_img.png"
+                          alt="1st_img"
+                        />
+                        <div class="ps-3">
+                          <p class="mb-0 fw-bold fs_sm text-black">
+                            design services
+                          </p>
+                          <p class="fw-bold fs_xsm clr_gray pt-2 mb-0">
+                            1 month later
+                          </p>
+                        </div>
+                      </div>
+                      <div class="cursor_pointer">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M9 18L15 12L9 6"
+                            stroke="#6D7D93"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="target_sales_box mt-3 mb-1 cards">
+                    <div
+                      class="py-2 my-1 px-3 d-flex align-items-center justify-content-between"
+                    >
+                      <div class="d-flex align-items-center">
+                        <img
+                          width="48px"
+                          src="./assets/img/png/fourth_img.png"
+                          alt="1st_img"
+                        />
+                        <div class="ps-3">
+                          <p class="mb-0 fw-bold fs_sm text-black">Service</p>
+                          <p class="fw-bold fs_xsm clr_gray pt-2 mb-0">
+                            4 month later
+                          </p>
+                        </div>
+                      </div>
+                      <div class="cursor_pointer">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M9 18L15 12L9 6"
+                            stroke="#6D7D93"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="target_sales_box mt-3 mb-1 cards">
+                    <div
+                      class="py-2 my-1 px-3 d-flex align-items-center justify-content-between"
+                    >
+                      <div class="d-flex align-items-center">
+                        <img
+                          width="48px"
+                          src="./assets/img/png/first_img.png"
+                          alt="1st_img"
+                        />
+                        <div class="ps-3">
+                          <p class="mb-0 fw-bold fs_sm text-black">
+                            Sale of goods
+                          </p>
+                          <p class="fw-bold fs_xsm clr_gray pt-2 mb-0">
+                            1 month later
+                          </p>
+                        </div>
+                      </div>
+                      <div class="cursor_pointer">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M9 18L15 12L9 6"
+                            stroke="#6D7D93"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3">
+              <div class="account_box mt-4 mt-xl-0">
+                <div class="px-2 px-sm-3 px-md-4 px-lg-0 ps-lg-4 pt-4 mt-1">
+                  <div>
+                    <h2 class="fw-bold fs_base text-black">My Account Bank</h2>
+                    <div class="pe-4 pt-4 d-flex justify-content-center">
+                      <img
+                        class="w-100 img_h_w"
+                        src="./assets/img/png/Card.png"
+                        alt="Card"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="d-flex justify-content-around my-sm-2 my-md-3 my-lg-4 pt-3 pb-4"
+                  >
+                    <button
+                      class="d-flex align-items-center button_padding card_btn_radius cards"
+                    >
+                      <span>
+                        <svg
+                          width="14"
+                          height="14"
+                          viewBox="0 0 14 14"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M7 2.91667V11.0833"
+                            stroke="#6D7D93"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M2.91666 7H11.0833"
+                            stroke="#6D7D93"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </span>
+                      <span class="ps-2 fw-bold fs_sm clr_gray"
+                        >Add New Card</span
+                      >
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="account_box px-2 px-md-3 px-lg-4 mt-4 mt-xl-5">
+                <div class="py-4">
+                  <p class="mb-0 fw-bold fs_base text-black pb-1">Target</p>
+                  <div class="target_sales_box mt-3 mb-1 cards">
+                    <div
+                      class="py-2 my-1 px-3 d-flex align-items-center justify-content-between"
+                    >
+                      <div class="d-flex align-items-center">
+                        <img
+                          width="48px"
+                          src="./assets/img/png/first_img.png"
+                          alt="1st_img"
+                        />
+                        <div class="ps-3">
+                          <p class="mb-0 fw-bold fs_sm text-black">
+                            Sale of goods
+                          </p>
+                          <p class="fw-bold fs_xsm clr_gray pt-2 mb-0">
+                            1 month later
+                          </p>
+                        </div>
+                      </div>
+                      <div class="cursor_pointer">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M9 18L15 12L9 6"
+                            stroke="#6D7D93"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="target_sales_box mt-3 mb-1 cards">
+                    <div
+                      class="py-2 my-1 px-3 d-flex align-items-center justify-content-between"
+                    >
+                      <div class="d-flex align-items-center">
+                        <img
+                          width="48px"
+                          src="./assets/img/png/second_img.png"
+                          alt="1st_img"
+                        />
+                        <div class="ps-3">
+                          <p class="mb-0 fw-bold fs_sm text-black">
+                            property rental
+                          </p>
+                          <p class="fw-bold fs_xsm clr_gray pt-2 mb-0">
+                            3 month later
+                          </p>
+                        </div>
+                      </div>
+                      <div class="cursor_pointer">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M9 18L15 12L9 6"
+                            stroke="#6D7D93"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="target_sales_box mt-3 mb-1 cards">
+                    <div
+                      class="py-2 my-1 px-3 d-flex align-items-center justify-content-between"
+                    >
+                      <div class="d-flex align-items-center">
+                        <img
+                          width="48px"
+                          src="./assets/img/png/third_img.png"
+                          alt="1st_img"
+                        />
+                        <div class="ps-3">
+                          <p class="mb-0 fw-bold fs_sm text-black">
+                            design services
+                          </p>
+                          <p class="fw-bold fs_xsm clr_gray pt-2 mb-0">
+                            1 month later
+                          </p>
+                        </div>
+                      </div>
+                      <div class="cursor_pointer">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M9 18L15 12L9 6"
+                            stroke="#6D7D93"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="target_sales_box mt-3 mb-1 cards">
+                    <div
+                      class="py-2 my-1 px-3 d-flex align-items-center justify-content-between"
+                    >
+                      <div class="d-flex align-items-center">
+                        <img
+                          width="48px"
+                          src="./assets/img/png/fourth_img.png"
+                          alt="1st_img"
+                        />
+                        <div class="ps-3">
+                          <p class="mb-0 fw-bold fs_sm text-black">Service</p>
+                          <p class="fw-bold fs_xsm clr_gray pt-2 mb-0">
+                            4 month later
+                          </p>
+                        </div>
+                      </div>
+                      <div class="cursor_pointer">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M9 18L15 12L9 6"
+                            stroke="#6D7D93"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="target_sales_box mt-3 mb-1 cards">
+                    <div
+                      class="py-2 my-1 px-3 d-flex align-items-center justify-content-between"
+                    >
+                      <div class="d-flex align-items-center">
+                        <img
+                          width="48px"
+                          src="./assets/img/png/first_img.png"
+                          alt="1st_img"
+                        />
+                        <div class="ps-3">
+                          <p class="mb-0 fw-bold fs_sm text-black">
+                            Sale of goods
+                          </p>
+                          <p class="fw-bold fs_xsm clr_gray pt-2 mb-0">
+                            1 month later
+                          </p>
+                        </div>
+                      </div>
+                      <div class="cursor_pointer">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M9 18L15 12L9 6"
+                            stroke="#6D7D93"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  <div id="tab_2" class="tabcontent p-5 mx-5  mt-5">
+    <img class="w-100 p-5" src="./assets/img/png/map_img.png" alt="map" />
+  </div>
+  <div id="tab_3" class="tabcontent p-5 mx-5 mt-5">
+    <div class="account_box mt-4 mt-xl-0">
+      <div class="px-2 px-sm-3 px-md-4 px-lg-0 ps-lg-4 pt-4 mt-1">
+        <div>
+          <h2 class="fw-bold fs_base text-black">My Account Bank</h2>
+          <div class="pe-4 pt-4 d-flex justify-content-center">
+            <img
+              class="w-100 img_h_w"
+              src="./assets/img/png/Card.png"
+              alt="Card"
+            />
+          </div>
+        </div>
+        <div
+          class="d-flex justify-content-around my-sm-2 my-md-3 my-lg-4 pt-3 pb-4"
+        >
+          <button
+            class="d-flex align-items-center button_padding card_btn_radius cards"
+          >
+            <span>
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7 2.91667V11.0833"
+                  stroke="#6D7D93"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M2.91666 7H11.0833"
+                  stroke="#6D7D93"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+            <span class="ps-2 fw-bold fs_sm clr_gray"
+              >Add New Card</span
+            >
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="tab_4" class="p-5 mx-5 tabcontent mt-5">
+    <div class="account_box px-2 px-md-3 px-lg-4 mt-4 mt-xl-5">
+      <div class="py-4">
+        <p class="mb-0 fw-bold fs_base text-black pb-1">Target</p>
+        <div class="target_sales_box mt-3 mb-1 cards">
+          <div
+            class="py-2 my-1 px-3 d-flex align-items-center justify-content-between"
+          >
+            <div class="d-flex align-items-center">
+              <img
+                width="48px"
+                src="./assets/img/png/first_img.png"
+                alt="1st_img"
+              />
+              <div class="ps-3">
+                <p class="mb-0 fw-bold fs_sm text-black">
+                  Sale of goods
+                </p>
+                <p class="fw-bold fs_xsm clr_gray pt-2 mb-0">
+                  1 month later
+                </p>
+              </div>
+            </div>
+            <div class="cursor_pointer">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 18L15 12L9 6"
+                  stroke="#6D7D93"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="target_sales_box mt-3 mb-1 cards">
+          <div
+            class="py-2 my-1 px-3 d-flex align-items-center justify-content-between"
+          >
+            <div class="d-flex align-items-center">
+              <img
+                width="48px"
+                src="./assets/img/png/second_img.png"
+                alt="1st_img"
+              />
+              <div class="ps-3">
+                <p class="mb-0 fw-bold fs_sm text-black">
+                  property rental
+                </p>
+                <p class="fw-bold fs_xsm clr_gray pt-2 mb-0">
+                  3 month later
+                </p>
+              </div>
+            </div>
+            <div class="cursor_pointer">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 18L15 12L9 6"
+                  stroke="#6D7D93"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="target_sales_box mt-3 mb-1 cards">
+          <div
+            class="py-2 my-1 px-3 d-flex align-items-center justify-content-between"
+          >
+            <div class="d-flex align-items-center">
+              <img
+                width="48px"
+                src="./assets/img/png/third_img.png"
+                alt="1st_img"
+              />
+              <div class="ps-3">
+                <p class="mb-0 fw-bold fs_sm text-black">
+                  design services
+                </p>
+                <p class="fw-bold fs_xsm clr_gray pt-2 mb-0">
+                  1 month later
+                </p>
+              </div>
+            </div>
+            <div class="cursor_pointer">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 18L15 12L9 6"
+                  stroke="#6D7D93"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="target_sales_box mt-3 mb-1 cards">
+          <div
+            class="py-2 my-1 px-3 d-flex align-items-center justify-content-between"
+          >
+            <div class="d-flex align-items-center">
+              <img
+                width="48px"
+                src="./assets/img/png/fourth_img.png"
+                alt="1st_img"
+              />
+              <div class="ps-3">
+                <p class="mb-0 fw-bold fs_sm text-black">Service</p>
+                <p class="fw-bold fs_xsm clr_gray pt-2 mb-0">
+                  4 month later
+                </p>
+              </div>
+            </div>
+            <div class="cursor_pointer">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 18L15 12L9 6"
+                  stroke="#6D7D93"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="target_sales_box mt-3 mb-1 cards">
+          <div
+            class="py-2 my-1 px-3 d-flex align-items-center justify-content-between"
+          >
+            <div class="d-flex align-items-center">
+              <img
+                width="48px"
+                src="./assets/img/png/first_img.png"
+                alt="1st_img"
+              />
+              <div class="ps-3">
+                <p class="mb-0 fw-bold fs_sm text-black">
+                  Sale of goods
+                </p>
+                <p class="fw-bold fs_xsm clr_gray pt-2 mb-0">
+                  1 month later
+                </p>
+              </div>
+            </div>
+            <div class="cursor_pointer">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 18L15 12L9 6"
+                  stroke="#6D7D93"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- bootstrap link -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <!-- slick min js -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+      integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- navbaar -->
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".nav-menu ");
+      hamburger.addEventListener("click", function () {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+      });
+    </script>
+    <!-- onclick-function -->
+    <script>
+      function openDashboard(evt, dashboard) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(dashboard).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+      document.getElementById("defaultOpen").click();
+    </script>
+    <!-- slider  -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+      integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+      crossorigin="anonymous"
+      refer2rerpolicy="no-referrer"
+    ></script>
+    <script>
+      $(".slider").slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: false,
+        dots: false,
+        arrows: false,
+        autoplaySpeed: 2000,
+        responsive: [
+          {
+            breakpoint: 992,
+            settings: {
+              arrows: false,
+              autoplay: true,
+              slidesToShow: 3,
+            },
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              arrows: false,
+              autoplay: true,
+              slidesToShow: 2,
+            },
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              arrows: false,
+              autoplay: true,
+              slidesToShow: 1,
+            },
+          },
+        ],
+      });
+    </script>
+  </body>
+</html>
